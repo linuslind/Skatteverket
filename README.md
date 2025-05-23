@@ -1,6 +1,6 @@
-# SHS Skatteverket Curl Upload Guide (Windows)
+aaaaaaaaaaaaaaa# SHS Skatteverket Curl Upload Guide (Windows)
 
-This guide helps you upload a test file (`testfil.xml`) to Skatteverket's SHS test environment using `curl` in Windows with mutual TLS authentication.
+This guide helps you upload a test file (`testfile.xml`) to Skatteverket's SHS test environment using `curl` in Windows with mutual TLS authentication.
 
 ---
 
@@ -9,7 +9,7 @@ This guide helps you upload a test file (`testfil.xml`) to Skatteverket's SHS te
 - `curl` for Windows (recommended: [latest version with OpenSSL](https://curl.se/windows/))
 - A client certificate (`kommunA.crt`)
 - A CA certificate in PEM format (`ExpiTrust-EID-CA-v4.pem`)
-- File to upload (`testfil.xml`)
+- File to upload (`testfile.xml`)
 
 ---
 
@@ -37,7 +37,7 @@ openssl pkcs12 -in kommunA.p12 -clcerts -nodes -out kommunA.crt
 
 Then use with `curl`:
 ```sh
-curl --cert kommunA.crt --cacert ExpiTrust-EID-CA-v4.pem -T testfil.xml "https://shs.test.skatteverket.se/..."
+curl --cert kommunA.crt --cacert ExpiTrust-EID-CA-v4.pem -T testfile.xml "https://shs.test.skatteverket.se/..."
 ```
 
 ---
@@ -48,7 +48,7 @@ curl --cert kommunA.crt --cacert ExpiTrust-EID-CA-v4.pem -T testfil.xml "https:/
 curl/curl.exe ^
   --cert certs/kommunA.crt ^
   --cacert certs/ExpiTrust-EID-CA-v4.pem ^
-  -T testfil.xml ^
+  -T testfile.xml ^
   "https://shs.test.skatteverket.se/et/et_web/auto/<uuid>/"
 ```
 
