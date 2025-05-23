@@ -1,4 +1,4 @@
-aaaaaaaaaaaaaaa# SHS Skatteverket Curl Upload Guide (Windows)
+# SHS Skatteverket Curl Upload Guide (Windows)
 
 This guide helps you upload a test file (`testfile.xml`) to Skatteverket's SHS test environment using `curl` in Windows with mutual TLS authentication.
 
